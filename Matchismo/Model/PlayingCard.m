@@ -12,7 +12,7 @@
 
 @synthesize suit = _suit; // required because we provide getter AND setter
 
--(NSString *)contents {
+- (NSString *)contents {
     NSArray *rankStrings = [PlayingCard rankStrings];
 
     return [rankStrings[self.rank] stringByAppendingString:self.suit];
@@ -59,7 +59,7 @@
     return _suit ? _suit : @"?";
 }
 
--(void)setRank:(NSUInteger)rank {
+- (void)setRank:(NSUInteger)rank {
     if (rank <= [PlayingCard maxRank]) {
         _rank = rank;
     }
